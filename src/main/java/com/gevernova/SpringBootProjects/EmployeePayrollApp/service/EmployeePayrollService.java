@@ -1,5 +1,6 @@
 package com.gevernova.SpringBootProjects.EmployeePayrollApp.service;
 import com.gevernova.SpringBootProjects.EmployeePayrollApp.dto.EmployeePayrollDTO;
+import com.gevernova.SpringBootProjects.EmployeePayrollApp.exception.EmployeePayrollException;
 import com.gevernova.SpringBootProjects.EmployeePayrollApp.model.EmployeePayrollData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -29,10 +30,7 @@ public class EmployeePayrollService implements IEmployeePayrollService {
         return repository.findAll();
     }
 
-    @Override
-    public EmployeePayrollData getById(long id) {
-        return null;
-    }
+
 
     @Override
     public EmployeePayrollData getById(long id) {
