@@ -1,5 +1,10 @@
 package com.gevernova.SpringBootProjects.EmployeePayrollApp.service;
 
+import com.gevernova.SpringBootProjects.EmployeePayrollApp.dto.EmployeePayrollDTO;
+import com.gevernova.SpringBootProjects.EmployeePayrollApp.model.EmployeePayrollData;
+
+import java.util.List;
+
 public interface IEmployeePayrollService {
 
     EmployeePayrollData create(EmployeePayrollDTO dto);

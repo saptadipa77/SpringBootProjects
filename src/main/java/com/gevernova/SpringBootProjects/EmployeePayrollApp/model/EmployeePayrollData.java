@@ -10,6 +10,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "employee_payroll")
+
 public class EmployeePayrollData {
 
     @Id

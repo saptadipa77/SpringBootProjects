@@ -1,6 +1,12 @@
 package com.gevernova.SpringBootProjects.EmployeePayrollApp.service;
+import com.gevernova.SpringBootProjects.EmployeePayrollApp.dto.EmployeePayrollDTO;
+import com.gevernova.SpringBootProjects.EmployeePayrollApp.model.EmployeePayrollData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import com.gevernova.SpringBootProjects.EmployeePayrollApp.repository.EmployeePayrollRepository;
+
+import java.util.List;
+
 @Slf4j
 @Service
 public class EmployeePayrollService implements IEmployeePayrollService {
@@ -21,6 +27,11 @@ public class EmployeePayrollService implements IEmployeePayrollService {
     @Override
     public List<EmployeePayrollData> getAll() {
         return repository.findAll();
+    }
+
+    @Override
+    public EmployeePayrollData getById(long id) {
+        return null;
     }
 
     @Override
@@ -48,12 +59,13 @@ public class EmployeePayrollService implements IEmployeePayrollService {
     }
 
     private void mapDtoToEntity(EmployeePayrollDTO dto, EmployeePayrollData emp) {
-        emp.setName(dto.name);
-        emp.setGender(dto.gender);
-        emp.setSalary(dto.salary);
-        emp.setDepartment(dto.department);
-        emp.setStartDate(dto.startDate);
-        emp.setNote(dto.note);
-        emp.setProfilePic(dto.profilePic);
+
+        emp.setName(dto.getName());
+        emp.setGender(dto.getGender());
+        emp.setDepartment(dto.getDepartment());
+        emp.setSalary(dto.getSalary());
+        emp.setStartDate(dto.getStartDate());
+        emp.setNote(dto.getNote());
+        emp.setProfilePic(dto.getProfilePic());
     }
 }

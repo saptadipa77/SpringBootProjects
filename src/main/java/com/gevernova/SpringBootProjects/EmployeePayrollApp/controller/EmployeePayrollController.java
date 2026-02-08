@@ -1,8 +1,10 @@
 package com.gevernova.SpringBootProjects.EmployeePayrollApp.controller;
 
 
+import com.gevernova.SpringBootProjects.EmployeePayrollApp.dto.EmployeePayrollDTO;
 import com.gevernova.SpringBootProjects.EmployeePayrollApp.model.EmployeePayrollData;
 import com.gevernova.SpringBootProjects.EmployeePayrollApp.service.IEmployeePayrollService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
